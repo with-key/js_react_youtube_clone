@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
-const TopNavBar = () => {
+const TopNavBar = ({}) => {
   return (
     <NavBar>
       <Logo>
@@ -20,6 +20,14 @@ const TopNavBar = () => {
           />
         </svg>
       </Logo>
+      <div>
+        <input
+          className="serach-input"
+          type="text"
+          placeholder="오늘은 뭐먹지.."
+        />
+        <button className="search-btn">검색</button>
+      </div>
     </NavBar>
   );
 };
@@ -27,6 +35,8 @@ const TopNavBar = () => {
 export default TopNavBar;
 
 const NavBar = styled.nav`
+  z-index: 999;
+  box-sizing: border-box;
   width: 100%;
   height: 70px;
   background-color: #fff;
@@ -36,9 +46,35 @@ const NavBar = styled.nav`
   left: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+
+  .serach-input {
+    transition: width 200ms ease-in-out;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    padding-left: 20px;
+    margin-right: 10px;
+    :focus {
+      border: 1px solid #ffc905;
+      width: 300px;
+    }
+  }
+
+  .search-btn {
+    width: 80px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ffc905;
+    font-size: 16px;
+    font-weight: 600;
+  }
 `;
 
 const Logo = styled.div`
   width: 150px;
-  margin-left: 20px;
 `;
