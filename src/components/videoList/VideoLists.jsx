@@ -13,8 +13,12 @@ const VideoLists = (props) => {
 };
 
 const Container = styled.div`
+  padding-top: 70px;
   justify-content: center;
+  align-items: flex-end;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 `;
 

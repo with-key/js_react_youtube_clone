@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import VideoLists from "./components/videoList/VideoLists";
+import TopNavBar from "./components/navgation/TopNavBar";
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <>
+      <TopNavBar />
       <VideoLists videos={videos} />
     </>
   );
