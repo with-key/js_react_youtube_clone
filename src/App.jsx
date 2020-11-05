@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     const requestOptions = {
       method: "GET",
-      redirect: "follow", //
+      redirect: "follow", // git 업데이트 테스트!!!!!! 얏호!!!
     };
 
     fetch(
