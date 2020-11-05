@@ -3,12 +3,12 @@ import VideoLists from "./components/videoList/VideoLists";
 
 function App() {
   const [videos, setVideos] = useState([]);
-
+  // tsst
   // 마운트가 됐을 때만 호출됨 , [] <- 업데이트 할 때 호출하고자 하는 것을 여기에 넣으면 된다
   useEffect(() => {
     const requestOptions = {
       method: "GET",
-      redirect: "follow", // git 업데이트 테스트!!!!!! 얏호!!!
+      redirect: "follow",
     };
 
     fetch(
