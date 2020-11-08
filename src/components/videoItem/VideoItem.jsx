@@ -1,21 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function VideoItem({
-  video: {
-    snippet: {
-      title,
-      thumbnails: {
-        medium: { url },
-      },
-    },
-  },
-}) {
+export default function VideoItem({ video }) {
   return (
     <>
       <ListGrid>
-        <img src={url} alt="thumbnails" />
-        <h5>{title}</h5>
+        <img
+          src={`https://image.tmdb.org/t/p/w220_and_h330_face${video.poster_path}`}
+        />
+        <div>{video.title}</div>
       </ListGrid>
     </>
   );

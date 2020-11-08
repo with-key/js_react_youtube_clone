@@ -2,11 +2,11 @@ import React from "react";
 import VideoItem from "../videoItem/VideoItem";
 import styled from "styled-components";
 
-const VideoLists = (props) => {
+const VideoLists = ({ videos }) => {
   return (
     <Container>
-      {props.videos.map((video) => (
-        <VideoItem key={video.id} video={video} />
+      {videos.map((video) => (
+        <VideoItem video={video} key={video.id} />
       ))}
     </Container>
   );
